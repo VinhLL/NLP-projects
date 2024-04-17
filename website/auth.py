@@ -1,3 +1,4 @@
+from operator import or_
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -13,10 +14,11 @@ auth = Blueprint('auth', __name__)
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        email = request.form.get('email')
+        email_or_username = request.form.get('email_or_username')  # Thêm input field cho username hoặc email
         password = request.form.get('password')
 
-        user = User.query.filter_by(email=email).first()
+        # Kiểm tra xem người dùng nhập vào là email hay username
+        user = User.query.filter(or_(User.email == email_or_username, User.user_name == email_or_username)).first()
         if user:
             if user.password == hashlib.sha256(password.encode()).hexdigest():
                 flash('Logged in successfully!', category='success')
@@ -25,9 +27,10 @@ def login():
             else:
                 flash('Incorrect password, try again.', category='error')
         else:
-            flash('Email does not exist.', category='error')
+            flash('Email or username does not exist.', category='error')
 
     return render_template("login.html", user=current_user)
+
 
 
 @auth.route('/logout')
@@ -47,21 +50,27 @@ def sign_up():
         security_question = request.form.get('securityQuestion') 
         security_answer = request.form.get('securityAnswer')     
 
-        user = User.query.filter_by(email=email).first()
-        if user:
-            flash('Email already exists.', category='error')
-        elif len(email) < 4:
-            flash('Email must be greater than 3 characters.', category='error')
+        # Kiểm tra các điều kiện và thông báo lỗi nếu có
+        error = None
+        if len(email) < 4:
+            error = 'Email must be greater than 3 characters.'
         elif len(user_name) < 2:
-            flash('First name must be greater than 1 character.', category='error')
+            error = 'Username must be greater than 1 character.'
         elif password1 != password2:
-            flash('Passwords don\'t match.', category='error')
+            error = 'Passwords do not match.'
         elif len(password1) < 7:
-            flash('Password must be at least 7 characters.', category='error')
+            error = 'Password must be at least 7 characters.'
+
+        if error is not None:
+            flash(error, category='error')
+            # Trả về form đăng ký với dữ liệu đã nhập
+            return render_template("sign_up.html", user=current_user, email=email, user_name=user_name,
+                                   security_question=security_question)
         else:
+            # Tiếp tục quá trình đăng ký nếu không có lỗi
             hashed_password = sha256(password1.encode()).hexdigest()
             new_user = User(email=email, user_name=user_name, password=hashed_password,
-                            security_question=security_question, security_answer=security_answer)  # Thêm thông tin câu hỏi bí mật
+                            security_question=security_question, security_answer=security_answer)
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
@@ -69,6 +78,7 @@ def sign_up():
             return redirect(url_for('views.home'))
 
     return render_template("sign_up.html", user=current_user)
+
 
 
 @auth.route('/forgot-password', methods=['GET', 'POST'])
@@ -84,6 +94,7 @@ def forgot_password():
         else:
             flash('Email does not exist.', category='error')
     return render_template("forgot_password.html", user=user)
+
 
 @auth.route('/secret-question', methods=['GET', 'POST'])
 def secret_question():
@@ -105,6 +116,7 @@ def secret_question():
 
     return render_template("secret_question.html", email=email)
 
+
 @auth.route('/reset-password', methods=['GET', 'POST'])
 def reset_password():
     if request.method == 'POST':
@@ -116,9 +128,11 @@ def reset_password():
         if user:
             if password1 == password2:
                 # Mã hóa mật khẩu mới
-                hashed_password = sha256(password1.encode()).hexdigest()
+                hashed_password = hashlib.sha256(password1.encode()).hexdigest()
                 # Cập nhật mật khẩu mới vào cơ sở dữ liệu
                 user.password = hashed_password
+                User.query.filter_by(email=email).update({"password": hashed_password})
+
                 db.session.commit()
                 flash('Password changed successfully!', category='success')
                 # Chuyển hướng đến trang đăng nhập

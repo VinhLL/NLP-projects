@@ -4,10 +4,10 @@
 <form method="POST">
   <h3 align="center">Sign Up</h3>
   <div class="form-group">
-      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" />
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" value="{{ email }}" />
   </div>
   <div class="form-group">
-      <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name" />
+    <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name" value="{{ user_name }}" />
   </div>
   <div class="form-group">
       <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password" />
@@ -17,9 +17,9 @@
   </div>
   <div class="form-group">
     <select class="form-control" id="securityQuestion" name="securityQuestion">
-      <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
-      <option value="What is the name of your first pet?">What is the name of your first pet?</option>
-      <option value="What is the city where you were born?">What is the city where you were born?</option>
+      <option value="What is your mother's maiden name?" {% if security_question == "What is your mother's maiden name?" %} selected {% endif %}>What is your mother's maiden name?</option>
+      <option value="What is the name of your first pet?" {% if security_question == "What is the name of your first pet?" %} selected {% endif %}>What is the name of your first pet?</option>
+      <option value="What is the city where you were born?" {% if security_question == "What is the city where you were born?" %} selected {% endif %}>What is the city where you were born?</option>
     </select>
   </div>
   <div class="form-group">
