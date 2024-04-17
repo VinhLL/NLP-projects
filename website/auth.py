@@ -5,7 +5,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from . import db   ##means from __init__.py import db
 from flask_login import login_user, login_required, logout_user, current_user
 import hashlib
-from hashlib import sha256
 
 
 auth = Blueprint('auth', __name__)
@@ -20,7 +19,7 @@ def login():
         # Kiểm tra xem người dùng nhập vào là email hay username
         user = User.query.filter(or_(User.email == email_or_username, User.user_name == email_or_username)).first()
         if user:
-            if user.password == hashlib.sha256(password.encode()).hexdigest():
+            if check_password_hash(user.password, password):
                 flash('Logged in successfully!', category='success')
                 login_user(user, remember=True)
                 return redirect(url_for('views.home'))
@@ -44,18 +43,20 @@ def logout():
 def sign_up():
     if request.method == 'POST':
         email = request.form.get('email')
-        user_name = request.form.get('username')
+        user_name = request.form.get('userName')
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
-        security_question = request.form.get('securityQuestion') 
-        security_answer = request.form.get('securityAnswer')     
 
         # Kiểm tra các điều kiện và thông báo lỗi nếu có
         error = None
         if len(email) < 4:
             error = 'Email must be greater than 3 characters.'
         elif len(user_name) < 2:
+<<<<<<< HEAD
             error = 'Username must be greater than 1 character.'
+=======
+            flash('User\'s name must be greater than 1 character.', category='error')
+>>>>>>> 4b9c041851f17a034b1576d1961c3ec890aa0f9d
         elif password1 != password2:
             error = 'Passwords do not match.'
         elif len(password1) < 7:
@@ -67,16 +68,21 @@ def sign_up():
             return render_template("sign_up.html", user=current_user, email=email, user_name=user_name,
                                    security_question=security_question)
         else:
+<<<<<<< HEAD
             # Tiếp tục quá trình đăng ký nếu không có lỗi
             hashed_password = sha256(password1.encode()).hexdigest()
             new_user = User(email=email, user_name=user_name, password=hashed_password,
                             security_question=security_question, security_answer=security_answer)
+=======
+            new_user = User(email=email, user_name=user_name, password=hashlib.sha256(password1.encode()).hexdigest())
+>>>>>>> 4b9c041851f17a034b1576d1961c3ec890aa0f9d
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
             flash('Account created!', category='success')
             return redirect(url_for('views.home'))
 
+<<<<<<< HEAD
     return render_template("sign_up.html", user=current_user)
 
 
@@ -143,3 +149,6 @@ def reset_password():
             flash('Email does not exist.', category='error')
 
     return render_template("reset_password.html")
+=======
+    return render_template("sign_up.html", user=current_user)
+>>>>>>> 4b9c041851f17a034b1576d1961c3ec890aa0f9d
