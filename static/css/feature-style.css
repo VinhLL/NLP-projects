@@ -1,0 +1,125 @@
+/* feature-style.css */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.grid-section {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+    width: 100vw;
+    height: 100vh;
+
+    grid-template-areas: "fbox ic";
+}
+
+.feature-box {
+    display: grid;
+    grid-area: fbox;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 5fr 2fr;
+    grid-template-areas:
+        "hl"
+        "fc"
+        "QAbox";
+    background-color: #1e191b;
+}
+
+.homepage-logo {
+    grid-area: hl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-container {
+    display: grid;
+    grid-area: fc;
+    grid-template-columns: 1fr;
+    grid-gap: 1px;
+    grid-template-areas:
+        "TSbox"
+        "SAbox"
+        "MTbox";
+}
+
+.feature-button.Text-Summarization-box {
+    grid-area: TSbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-button.Sentimental-Analysis-box {
+    grid-area: SAbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-button.Machine-Translation-box {
+    grid-area: MTbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.QA-box {
+    grid-area: QAbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    display: grid;
+    grid-area: ic;
+    text-align: center;
+    grid-template-rows: 4fr 2fr 4fr;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    grid-template-areas:
+        "itext"
+        "action"
+        "otext";
+}
+
+.input-text {
+    grid-area: itext;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button {
+    grid-area: action;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.output-text {
+    grid-area: otext;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qa-container {
+    grid-template-columns: 1/ span 2;
+    margin-top: 2%;
+}

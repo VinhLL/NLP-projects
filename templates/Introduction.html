@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Web Project - Introduction</title>
+    <link rel="stylesheet" href="{% static 'css/introduction.css' %}" />
+  </head>
+  <body>
+    <a id="back-to-homepage" href="{% url 'apps:index' %}">Back to Homepage</a>
+    <section id="introduction">
+      <h1>Introduction</h1>
+      <p> Welcome to the NLP Web Project, the capstone project for our Software Engineering course. This project was chosen to explore the fascinating and rapidly evolving field of Natural Language Processing (NLP), which lies at the intersection of artificial intelligence, linguistics, and computer science. </p>
+      <p> The primary purpose of this project is to develop practical applications that leverage NLP techniques to solve real-world problems. Through this project, we aim to enhance our understanding of machine learning models, data processing, and software development principles while creating tools that can have a significant impact in various domains. </p>
+      <p> Our NLP Web Project includes several key functionalities designed to demonstrate the power and versatility of NLP technologies: </p>
+      <ul>
+        <li>
+          <a href="Text-Summarization.html">
+            <strong>Text Summarization</strong>
+        </li>
+        <li>
+          <a href="Sentimental-Analysis.html">
+            <strong>Sentiment Analysis</strong>
+        </li>
+        <li>
+          <a href="Machine-Translation.html">
+            <strong>Machine Translation</strong>
+          </a>
+        </li>
+      </ul>
+      <p> These features showcase the potential of NLP technologies to transform how we process and interact with textual data. Each functionality is designed to offer practical benefits and demonstrate the applications of AI in understanding and manipulating human language. </p>
+    </section>
+  </body>
+</html>

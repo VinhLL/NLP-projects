@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #8c52ff, #00bf63);
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+#back-to-homepage {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    background-image: linear-gradient(to right, #cdffc8, #94b9ff);
+    color: black;
+    text-decoration: none;
+    border-radius: 24px;
+    border: none;
+}
+
+#back-to-homepage:hover {
+    background-image: linear-gradient(to right, #94b9ff, #cdffc8);
+}
+
+#introduction {
+    width: 45%;
+    margin-top: 60px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1;
+    /* Adjust line height to half of the font size */
+}
+
+#introduction h1 {
+    font-size: 36px;
+    text-align: center;
+    /* Center the heading */
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: justify;
+    /* Align list items to the justify */
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+#introduction p {
+    text-align: justify;
+    /* Align paragraphs to the justify */
+}

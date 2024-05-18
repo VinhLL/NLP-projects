@@ -1,0 +1,118 @@
+/* text-style.css */
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+.white-box-text {
+    width: 250px;
+    height: 40px;
+    font-weight: 850;
+    font-size: 20px;
+    color: #df608f;
+    letter-spacing: 8px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.transparent-box-text {
+    white-space: nowrap;
+    font-family: "Poppins", sans-serif;
+    text-overflow: ellipsis;
+    position: relative;
+    font-weight: bold;
+    font-size: 86px;
+    color: #00233d;
+}
+
+.introduction-button {
+    white-space: nowrap;
+    width: 120px;
+    height: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #c1ff72;
+    color: #00233d;
+    text-decoration: none;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-button {
+    white-space: nowrap;
+    width: 170px;
+    height: 52px;
+    position: relative;
+    top: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    background-image: linear-gradient(to right,
+            #52a2ff 0%,
+            #3dff3f 50%,
+            #ffc33d 100%);
+    color: #00233d;
+    text-decoration: none;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-detail-text {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
+    color: #1e191b;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    align-items: center;
+    white-space: nomal;
+    overflow: visible;
+}
+
+.QA-button {
+    font-family: "Poppins", sans-serif;
+    white-space: nowrap;
+    position: relative;
+    font-weight: bold;
+    top: 20%;
+    font-size: 16px;
+    color: #00233d;
+    text-decoration: none;
+    background-clip: text;
+    border-radius: 24px;
+}
+
+.source-detail-text {
+    white-space: nowrap;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+    color: #1e191b;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/feature-style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/feature-text-style.css' %}">
+    <title>Machine Translation</title>
+</head>
+<body>
+<section class="grid-section">
+      <div class="feature-box">
+      <div class="homepage-logo">
+        <a class="logo" href="{% url 'apps:index' %}">
+          <img src="{% static 'images\homepage.png' %}" alt="Logo">
+        </a>
+      </div>
+      <div class="feature-container">
+        <div class="feature-button Text-Summarization-box">
+          <a href="{% url 'apps:summarize' %}" class="feature-text">Text Summarization</a>
+        </div>
+        <div class="feature-button Sentimental-Analysis-box">
+          <a href="{% url 'apps:sentimental' %}" class="feature-text">Sentimental Analysis</a>
+        </div>
+        <div class="feature-button Machine-Translation-box">
+          <a href="{% url 'apps:translate' %}" class="feature-now">Machine Translation</a>
+        </div>
+      </div>
+      <div class="QA-box">
+        <a href="{% url 'apps:qa' %}" class="QA-button">Q&A</a>
+      </div>
+    </div>
+      <div class="input-container">
+        <div class="input-text">
+          <textarea id="input" placeholder="Enter your text here..."></textarea>
+        </div>
+        <div class="action-box">
+          <button id="action-button" onclick="performAction()">
+            <img src="{% static 'images/button.png' %}" alt="Action">
+        </div>
+        </button>
+        <div id="output-text" class="placeholder-text">Your output here.</div>
+      </div>
+    </section>
+<script>
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+function performAction() {
+    var inputText = document.getElementById('input').value;
+    var outputTextElement = document.getElementById('output-text');
+
+    // CSRF token
+    var csrftoken = getCookie('csrftoken');
+
+    // Send POST request to the backend
+    fetch("{% url 'apps:translate_text' %}", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken
+        },
+        body: JSON.stringify({ text: inputText })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.translated_text) {
+            outputTextElement.innerText = data.translated_text;
+            outputTextElement.classList.remove('placeholder-text');
+        } else if (data.error) {
+            outputTextElement.innerText = data.error;
+            outputTextElement.classList.add('placeholder-text');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        outputTextElement.innerText = 'Error in translation';
+        outputTextElement.classList.add('placeholder-text');
+    });
+}
+</script>
+</body>
+</html>
