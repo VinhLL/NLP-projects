@@ -40,8 +40,6 @@
 	- HTML
 	- CSS
 	- JavaScript
-CSS
-JavaScript
 + **Backend:**
 	- Django
 + **Database**
@@ -55,9 +53,13 @@ JavaScript
 	<p> 
 		The NLP Web Project showcases several functionalities that highlight the capabilities of NLP technologies:
 	</p>
+
 	- Text Summarization: Condenses long documents into concise summaries.
+
 	- Sentiment Analysis: Identifies and extracts subjective information from text, determining the sentiment expressed.
+
 	- Machine Translation: Automatically translates text from one language to another.
+	
 	<p>
 		These features demonstrate the practical benefits of NLP technologies in processing and interacting with textual data, illustrating their applications in understanding and manipulating human language.
 	</p>
