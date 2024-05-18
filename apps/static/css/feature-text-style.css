@@ -1,0 +1,142 @@
+/* feature-text-style.css */
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+.homepage-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    height: auto;
+}
+
+.feature-now {
+    width: 250px;
+    height: 70px;
+    position: relative;
+    top: 5px;
+    background-image: linear-gradient(to right, #8c52ff, #00bf63);
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #1e191b;
+    text-decoration: none;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-text {
+    width: 250px;
+    height: 70px;
+    position: relative;
+    top: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    background-image: linear-gradient(to right, #cdffc8, #94b9ff);
+    color: #00233d;
+    text-decoration: none;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.QA-button {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #00233d;
+    text-decoration: none;
+    background-clip: text;
+    position: relative;
+    background: linear-gradient(to right, #ff66c4 0%, #ffde59 100%);
+    width: 72px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 24px;
+}
+
+textarea {
+    position: relative;
+    margin-top: 3%;
+    width: 80%;
+    height: 75%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 5px solid #000000;
+    font-size: 16px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#output-text {
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 5px solid #000000;
+    border-radius: 5px;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.placeholder-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #737373;
+    margin-top: 20px;
+    text-align: left;
+}
+
+a {
+    color: #1e191b;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Căn giữa tiêu đề Q&A */
+.qa-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+/* Định dạng cho bảng Q&A */
+.qa-table {
+    width: 80%;
+    /* Độ rộng của bảng */
+    margin: 0 auto;
+    /* Căn giữa bảng */
+    border-collapse: collapse;
+    /* Gộp đường viền của các ô */
+}
+
+.qa-table th,
+.qa-table td {
+    border: 1px solid #ccc;
+    /* Đường viền của các ô */
+    padding: 10px;
+    /* Khoảng cách nội dung với đường viền */
+}
+
+/* Định dạng cho các câu hỏi */
+.qa-table th {
+    font-weight: bold;
+    /* Đậm chữ */
+}

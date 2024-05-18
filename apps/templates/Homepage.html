@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NLP Web Project</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css\style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css\text-style.css' %}" />
+  </head>
+  <body>
+    <section class="grid-section">
+      <div class="gif">
+        <img src="{% static 'images/the_gif.gif' %}" alt="The gif">
+      </div>
+      <div class="top-box">
+        <div class="white-box">
+          <span class="white-box-text">GROUP 64</span>
+        </div>
+        <div class="transparent-box">
+          <span class="transparent-box-text">NLP Web Project</span>
+        </div>
+        <div class="introduction-box">
+          <a href="introduction/" class="introduction-button">Introduction</a>
+        </div>
+      </div>
+      <div class="feature-box">
+        <div class="feature-button Text-Summarization-box">
+          <a href="{% url 'apps:summarize' %}" class="feature-button">Text Summarization</a>
+        </div>
+        <div class="feature-button Sentimental-Analysis-box">
+          <a href="{% url 'apps:sentimental' %}" class="feature-button">Sentimental Analysis</a>
+        </div>
+        <div class="feature-button Machine-Translation-box">
+          <a href="{% url 'apps:translate' %}" class="feature-button">Machine Translation</a>
+        </div>
+        <div class="feature-detail-text Text-Summarization-detail">
+          <span class="feature-detail-text">AI-driven tool condenses text efficiently, retaining key points.</span>
+        </div>
+        <div class="feature-detail-text Sentimental-Analysis-detail">
+          <span class="feature-detail-text">AI model gauges emotions in text, offering insights.</span>
+        </div>
+        <div class="feature-detail-text Machine-Translation-detail">
+          <span class="feature-detail-text">AI seamlessly converts text between languages, preserving meaning.</span>
+        </div>
+      </div>
+      <div class="bot-box">
+        <div class="source-detail">
+          <span class="source-detail-text">Project made by group 64</span>
+        </div>
+        <div class="QA-box">
+          <a href="Q&A.html" class="QA-button">Q&A</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/feature-style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/feature-text-style.css' %}">
+    <title>Q&A</title>
+  </head>
+  <body>
+    <section class="grid-section">
+      <div class="feature-box">
+        <div class="homepage-logo">
+          <a class="logo" href="{% url 'apps:index' %}">
+            <img src="{% static 'images\homepage.png' %}" alt="Logo">
+          </a>
+        </div>
+        <div class="feature-container">
+          <div class="feature-button Text-Summarization-box">
+            <a href="{% url 'apps:summarize' %}" class="feature-text">Text Summarization</a>
+          </div>
+          <div class="feature-button Sentimental-Analysis-box">
+            <a href="{% url 'apps:sentimental' %}" class="feature-text">Sentimental Analysis</a>
+          </div>
+          <div class="feature-button Machine-Translation-box">
+            <a href="{% url 'apps:translate' %}" class="feature-text">Machine Translation</a>
+          </div>
+        </div>
+        <div class="QA-box">
+          <a href="Q&A.html" class="QA-button">Q&A</a>
+        </div>
+      </div>
+      <section class="qa-container">
+        <h1 class="qa-title">Q&A</h1>
+        <table class="qa-table">
+            <tr>
+                <th>Questions</th>
+                <th>Answers</th>
+            </tr>
+            <tr>
+                <td>What is the primary purpose of the NLP Web Project?</td>
+                <td>The primary purpose of the NLP Web Project is to develop practical applications that leverage NLP techniques to solve real-world problems.</td>
+            </tr>
+            <tr>
+                <td>What are the key functionalities of the NLP Web Project?</td>
+                <td>The key functionalities of the NLP Web Project include Text Summarization, Sentimental Analysis, and Machine Translation.</td>
+            </tr>
+            <tr>
+                <td>What is Text Summarization?</td>
+                <td>Text Summarization is an AI-driven tool that efficiently condenses lengthy texts into shorter summaries, retaining the most crucial information and key points.</td>
+            </tr>
+            <tr>
+                <td>What is Sentimental Analysis?</td>
+                <td>Sentimental Analysis is an AI model that gauges emotions expressed in text, offering insights into the sentiment behind the words.</td>
+            </tr>
+            <tr>
+                <td>What is Machine Translation?</td>
+                <td>Machine Translation is an AI-driven system that seamlessly converts text from one language to another, preserving the original meaning and context.</td>
+            </tr>
+            <tr>
+                <td>How do these features showcase the potential of NLP technologies?</td>
+                <td>These features showcase the potential of NLP technologies to transform how we process and interact with textual data, offering practical benefits and demonstrating the applications of AI in understanding and manipulating human language.</td>
+            </tr>
+        </table>
+    </section>
+  </body>
+</html>
