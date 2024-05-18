@@ -1,5 +1,5 @@
 # NLP Web Project
-<div align="center">
+<div align="left">
 	<a href="https://github.com/VinhLL/titles-generator/graphs/contributors">
 		<img src="https://img.shields.io/github/contributors/VinhLL/titles-generator" alt="contributors" />
 	</a>
