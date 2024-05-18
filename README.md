@@ -1,8 +1,5 @@
-# I have no idea what to name this.
+# NLP Web Project
 <div align="center">
-	<h1>NLP Web Project</h1>
-	<!-- Badges -->
-	<p>
 	<a href="https://github.com/VinhLL/titles-generator/graphs/contributors">
 		<img src="https://img.shields.io/github/contributors/VinhLL/titles-generator" alt="contributors" />
 	</a>
@@ -59,7 +56,7 @@
 	- Sentiment Analysis: Identifies and extracts subjective information from text, determining the sentiment expressed.
 
 	- Machine Translation: Automatically translates text from one language to another.
-	
+
 	<p>
 		These features demonstrate the practical benefits of NLP technologies in processing and interacting with textual data, illustrating their applications in understanding and manipulating human language.
 	</p>
