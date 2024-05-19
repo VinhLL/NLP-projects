@@ -1,9 +1,9 @@
-backend/    @loozzi, @22022671-Sang-Tran
+backend/     @22022671-Sang-Tran
 
-*.md    @loozzi, @22022671-Sang-Tran, @HvTung04, @QuanVuong14, @VinhLL
+*.md     @22022671-Sang-Tran, @HvTung04, @QuanVuong14, @VinhLL
 
-frontend/   @loozzi @VinhLL
+frontend/   @VinhLL
 
 model/ @HvTung04, @QuanVuong14
 
-*.gitignore @loozzi
+*.gitignore 
