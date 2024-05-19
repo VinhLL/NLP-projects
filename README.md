@@ -117,6 +117,10 @@ Bui Q V is a typical user of the NLP Web Project, utilizing text summarization, 
 + **Initalize Models**: 3/5/2024
 + **Project Timeline Summary** : 20/2/2024 - 15/5/2024
 
++ ## Demo Video
+
+Watch the demo video [here](https://drive.google.com/file/d/1yrKUuPHWSoV96Nd-0NaWOTd2WRGP1lDH/view?pli=1).
+
 ## Visit our website:
 Click [here]() to go to the Something something website
 
