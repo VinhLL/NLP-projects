@@ -25,6 +25,8 @@
 	<a href="https://github.comVinhLL/titles-generator/issues/">Request Feature</a>
 </h4>
 </div>
+</h4>
+<img src="static/images/cover.png" alt="Project Cover Image" />
 
 ## About the Project
 <p>
@@ -65,6 +67,55 @@
 + **Frontend** :30/4/2024
 + **Initalize Models**: 3/5/2024
 + **Project Timeline Summary** : 20/2/2024 - 15/5/2024
+
+## Installation and Usage
+1. **Activate the virtual environment:**
+```
+	.venv\Scripts\Activate.ps1
+```
+2. **Install the required packages:**
+```
+	python -m pip install -r requirements.txt
+```
+3. **Run the server:**
+```
+	python manage.py runserver
+```
+
+## Persona
+### Name: Bui Q V
+
+- **Age:** 15
+- **Occupation:** Student
+- **Goal:**
+  - Understand and summarize long articles and study materials quickly.
+  - Identify and comprehend the sentiment in various texts to aid in studies and personal growth.
+  - Translate foreign language texts for better understanding and learning.
+
+### Challenges:
+- Difficulty in summarizing lengthy study materials and articles efficiently.
+- Struggling to grasp the underlying sentiment in texts, which impacts comprehension and communication skills.
+- Language barriers when dealing with texts in foreign languages.
+
+### Solutions Needed:
+- A tool that can quickly and accurately summarize long documents, making studying more efficient.
+- An application that can analyze and identify sentiment in texts to improve comprehension and emotional intelligence.
+- A reliable machine translation feature to assist in understanding and learning from foreign language texts.
+
+### Using NLP Web Project:
+Bui Q V uses the NLP Web Project to:
+- **Text Summarization:** Condense lengthy study materials into concise summaries for easier studying and revision.
+- **Sentiment Analysis:** Analyze texts to understand the sentiment and improve comprehension and communication.
+- **Machine Translation:** Translate foreign language texts into their native language to enhance learning and understanding.
+
+### Benefits:
+- Helps Bui Q V study more efficiently by summarizing lengthy documents.
+- Enhances comprehension and communication skills through sentiment analysis.
+- Overcomes language barriers, enabling learning from diverse sources.
+
+### Conclusion:
+Bui Q V is a typical user of the NLP Web Project, utilizing text summarization, sentiment analysis, and machine translation features. These functionalities help Bui Q V manage study materials effectively, understand sentiments in texts, and overcome language barriers, thereby improving overall learning and comprehension.
+
 
 ## Visit our website:
 Click [here]() to go to the Something something website
