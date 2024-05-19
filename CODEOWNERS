@@ -4,4 +4,6 @@ backend/    @loozzi, @22022671-Sang-Tran
 
 frontend/   @loozzi @VinhLL
 
+model/ @HvTung04, @QuanVuong14
+
 *.gitignore @loozzi
