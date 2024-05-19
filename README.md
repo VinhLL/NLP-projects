@@ -1,11 +1,5 @@
-# CoTTSum (CourseTitleTranslateSummarize app)
-<div align="center">
-	<h1>Something something</h1>
-	<p style = "color: palegreen;">
-		<b>A website for something something </b>
-	</p>
-	<!-- Badges -->
-	<p>
+# NLP Web Project
+<div align="left">
 	<a href="https://github.com/VinhLL/titles-generator/graphs/contributors">
 		<img src="https://img.shields.io/github/contributors/VinhLL/titles-generator" alt="contributors" />
 	</a>
@@ -34,15 +28,17 @@
 
 ## About the Project
 <p>
-		This is Something something
+		The NLP Web Project is the capstone project for our Software Engineering course, aimed at exploring the dynamic field of Natural Language Processing (NLP). This project intersects artificial intelligence, linguistics, and computer science, focusing on practical applications of NLP to solve real-world problems.
 
 </p>
 
 ## Technology employed in the project
 + **Frontend:**
+	- HTML
+	- CSS
+	- JavaScript
 + **Backend:**
-	- Programming Language: Python
-	- Web Framework: Flask
+	- Django
 + **Database**
 	- Database management system: SQLAlchemy
 + **Version Control and Source Code Management**
@@ -50,11 +46,25 @@
 	- Source Code Management : Git Flow, Feature Branching
 + **Security and Authentication**
 	- JSON Web Tokens, OAuth
++ **Key Functionalities:**
+	<p> 
+		The NLP Web Project showcases several functionalities that highlight the capabilities of NLP technologies:
+	</p>
 
+	- Text Summarization: Condenses long documents into concise summaries.
+
+	- Sentiment Analysis: Identifies and extracts subjective information from text, determining the sentiment expressed.
+
+	- Machine Translation: Automatically translates text from one language to another.
+
+	<p>
+		These features demonstrate the practical benefits of NLP technologies in processing and interacting with textual data, illustrating their applications in understanding and manipulating human language.
+	</p>
 ## Timeline
-+ **Base Backend** : ???
-+ **Initalize Models**: ???
-+ **Design Database**: ???
++ **Backend** : 15/4/2024
++ **Frontend** :30/4/2024
++ **Initalize Models**: 3/5/2024
++ **Project Timeline Summary** : 20/2/2024 - 15/5/2024
 
 ## Visit our website:
 Click [here]() to go to the Something something website
