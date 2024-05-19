@@ -62,11 +62,6 @@
 	<p>
 		These features demonstrate the practical benefits of NLP technologies in processing and interacting with textual data, illustrating their applications in understanding and manipulating human language.
 	</p>
-## Timeline
-+ **Backend** : 15/4/2024
-+ **Frontend** :30/4/2024
-+ **Initalize Models**: 3/5/2024
-+ **Project Timeline Summary** : 20/2/2024 - 15/5/2024
 
 ## Installation and Usage
 1. **Activate the virtual environment:**
@@ -116,7 +111,20 @@ Bui Q V uses the NLP Web Project to:
 ### Conclusion:
 Bui Q V is a typical user of the NLP Web Project, utilizing text summarization, sentiment analysis, and machine translation features. These functionalities help Bui Q V manage study materials effectively, understand sentiments in texts, and overcome language barriers, thereby improving overall learning and comprehension.
 
+## Timeline
++ **Backend** : 15/4/2024
++ **Frontend** :30/4/2024
++ **Initalize Models**: 3/5/2024
++ **Project Timeline Summary** : 20/2/2024 - 15/5/2024
 
 ## Visit our website:
 Click [here]() to go to the Something something website
 
+## Contributors
+
+Thanks to the following people who have contributed to this project:
+
+- [@22022671-Sang-Tran](https://github.com/22022671-Sang-Tran)
+- [@HvTung04](https://github.com/HvTung04)
+- [@QuanVuong14](https://github.com/QuanVuong14)
+- [@VinhLL](https://github.com/VinhLL)
